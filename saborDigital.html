@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Digital | Cardápio Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://www.ba.senac.br/assets/template/images/senac_logo_branco.png" type="image/.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        /* reset basic de uma pagina */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* Variaveis */
+ :root{
+    --cor-primaria: #DC0000;
+    --cor-segundaria: #FBEF76;
+    --cor-terceiraria: #2d6a4f;
+    --cor-texto: #393E46;
+    --fundo: #f3f5ee;
+ }
+/* Setup Geral */
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--fundo);
+  color: #333;
+  line-height: 1.6;
+}
+/* Estilização do Cabeçalho */
+.header-restaurante {
+  background-color: var(--cor-primaria);
+  color: #f5f5f5;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.logo span {
+  color: var(--cor-segundaria);
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Tipografia do Cardapio */
+.titulo-categoria {
+  text-align: center;
+  margin: 40px 20px;
+  font-size: 2rem;
+  color: var(--cor-primaria);
+}
+
+.categoria hr{
+  border: solid 1px var(--cor-segundaria);
+}
+.card-item{
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 350px;
+  padding: 20px;
+  border: groove 1px transparent;
+  margin: 20px;
+  border-radius: 20px;
+  display: inline-block;
+}
+.card-img{
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+}
+.card-item h3 {
+  font-size: 1.4rem;
+  color: #1a1a1a;
+}
+
+.descricao {
+  color: #666;
+  font-style: italic;
+}
+
+.preco {
+  font-weight: bold;
+  color: #2d6a4f;
+  font-size: 1.2rem;
+}
+
+.btn-pedir{
+  background-color: var(--cor-terceiraria);
+  border: none;
+  color: white;
+  margin-top: 10PX;
+  padding: 15px 32px;
+  border-radius: 10px;
+  box-shadow: 1px 2px var(--cor-texto);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+.btn-pedir:hover{
+  background-color: #06a55d;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.5s;
+  }
+
+.footer-restaurante{
+  height: 80px;
+  background-color: var(--cor-primaria);
+  text-align: center;
+  color: var(--fundo);
+  padding-top: 30px;
+}
+
+/* Responsável */
+@media screen and (max-width:400px) {
+  .header-restaurante{
+    padding: 10px;
+  }
+  .logo{
+    font-size: 1.rem;
+  }
+  .grid-cardapio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-img{
+  width: 100%;
+  height: 100%;
+}
+.card-item h3{
+  font-size: 1rem;
+}
+
+.descricao{
+ font-size: 0.8rem;
+}
+.preco{
+  font-size: o.8rem;
+}
+.btn-pedir{
+  
+}
+}
+    </style>
+
+</head>
+<body>
+
+    <header class="header-restaurante">
+        <div class="container">
+            <h1 class="logo">Sabor <span>Digital</span></h1>
+            <nav class="nav-info">
+                <span>📍 Av. Principal, 123</span>
+                <span class="status-aberto">● Aberto agora</span>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <section class="categoria">
+            <h2 class="titulo-categoria">Entradas</h2>
+            <hr>
+            <div class="grid-cardapio">
+                
+                <article class="card-item">
+                    <img class="card-img" src="https://selecoes.ig.com.br/media/_versions/legacy/2/5/bfb842457bedf3e8ee5b59955b81cdf781e1dc46_widelg.jpg" width="300" height="auto">
+                    <div class="item-info">
+                        <div class="item-cabecalho">
+                            <h3>Bruschetta Tradicional</h3>
+                            <span class="preco">R$ 28,00</span>
+                        </div>
+                        <p class="descricao">Pão artesanal torrado, tomates frescos, manjericão e azeite extra virgem.</p>
+                        <button class="btn-pedir">Adicionar ao pedido</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <img class="card-img" src="https://selecoes.ig.com.br/media/_versions/legacy/2/5/bfb842457bedf3e8ee5b59955b81cdf781e1dc46_widelg.jpg" width="300" height="auto">
+                    <div class="item-info">
+                        <div class="item-cabecalho">
+                            <h3>Bruschetta Tradicional</h3>
+                            <span class="preco">R$ 28,00</span>
+                        </div>
+                        <p class="descricao">Pão artesanal torrado, tomates frescos, manjericão e azeite extra virgem.</p>
+                        <button class="btn-pedir">Adicionar ao pedido</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <img class="card-img" src="https://selecoes.ig.com.br/media/_versions/legacy/2/5/bfb842457bedf3e8ee5b59955b81cdf781e1dc46_widelg.jpg" width="300" height="auto">
+                    <div class="item-info">
+                        <div class="item-cabecalho">
+                            <h3>Bruschetta Tradicional</h3>
+                            <span class="preco">R$ 28,00</span>
+                        </div>
+                        <p class="descricao">Pão artesanal torrado, tomates frescos, manjericão e azeite extra virgem.</p>
+                        <button class="btn-pedir">Adicionar ao pedido</button>
+                    </div>
+                </article>
+
+                <article class="card-item">
+                    <img class="card-img" src=https://supermercadosrondon.com.br/guiadecarnes/images/postagens/quer_fazer_hamburger_artesanal_perfeito_2019-05-14.jpg width="300" height="auto">
+                    <div class="item-info">
+                        <div class="item-cabecalho">
+                            <h3>Hamburguer Artesanal</h3>
+                            <span class="preco">R$ 50,00</span>
+                        </div>
+                        <p class="descricao">Alface romana, croutons crocantes, parmesão e molho especial da casa.Para vc aproveitar</p>
+                        <button class="btn-pedir">Adicionar ao pedido</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="categoria">
+            <h2 class="titulo-categoria">Pratos Principais</h2>
+            <hr>
+            <div class="grid-cardapio">
+                
+                <article class="card-item">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=300&q=80" alt="Pizza Artesanal" class="item-img" width="auto" height="200">
+                    <div class="item-info">
+                        <div class="item-cabecalho">
+                            <h3>Pizza Margherita</h3>
+                            <span class="preco">R$ 55,00</span>
+                        </div>
+                        <p class="descricao">Massa de fermentação natural, molho de tomate italiano e muçarela de búfala.</p>
+                        <button class="btn-pedir">Adicionar ao pedido</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=300&q=80" alt="Pizza Artesanal" class="item-img" width="auto" height="200">
+                    <div class="item-info">
+                        <div class="item-cabecalho">
+                            <h3>Pizza Margherita</h3>
+                            <span class="preco">R$ 55,00</span>
+                        </div>
+                        <p class="descricao">Massa de fermentação natural, molho de tomate italiano e muçarela de búfala.</p>
+                        <button class="btn-pedir">Adicionar ao pedido</button>
+                    </div>
+                </article>
+                <article class="card-item">
+                    <img class="card-img" src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=300&q=80" alt="Pizza Artesanal" class="item-img" width="auto" height="200">
+                    <div class="item-info">
+                        <div class="item-cabecalho">
+                            <h3>Pizza Margherita</h3>
+                            <span class="preco">R$ 55,00</span>
+                        </div>
+                        <p class="descricao">Massa de fermentação natural, molho de tomate italiano e muçarela de búfala.</p>
+                        <button class="btn-pedir">Adicionar ao pedido</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer-restaurante">
+        <p>&copy; 2026 Sabor Digital - Desenvolvido na UC13</p>
+    </footer>
+
+</body>
+</html>
